@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>ALei</title>
+  <meta name="description" content="人生苦短，及时行乐。" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="ALei">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(//blog.ghost.org/content/images/2013/Nov/cover.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="//blog.ghost.org/content/images/2013/Nov/bloglogo_1-1.png" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">ALei</h1>
+            <h2 class="blog-description">人生苦短，及时行乐。</h2>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2019-10-15T03:03:26.845Z" itemprop="datePublished">
+          2019-10-15
+      </time>
+    
+</span>
+    <h1 class="post-title"></h1>
+    <section class="post-content">
+      <hr>
+<p>title:各种时间类常用方法及转换</p>
+<p>date:2019-10-15</p>
+<hr>
+<h2 id="各种时间戳类常用方法及转换"><a href="#各种时间戳类常用方法及转换" class="headerlink" title="各种时间戳类常用方法及转换"></a>各种时间戳类常用方法及转换</h2><h3 id="Instant类"><a href="#Instant类" class="headerlink" title="Instant类"></a>Instant类</h3><h4 id="一、含义：-从1970-01-01-00：00：00到当前时间的毫秒值"><a href="#一、含义：-从1970-01-01-00：00：00到当前时间的毫秒值" class="headerlink" title="一、含义： 从1970-01-01 00：00：00到当前时间的毫秒值"></a>一、含义： 从1970-01-01 00：00：00到当前时间的毫秒值</h4><h4 id="二、常用方法："><a href="#二、常用方法：" class="headerlink" title="二、常用方法："></a>二、常用方法：</h4><p>​         <strong>now():</strong>   获取当前时间（ 美国时间，和处于东八区的我们相差八个小时。 ）</p>
+<p>​         <strong>atOffset():</strong>    设置偏移量 </p>
+<p>​         <strong>atZone()</strong>  获取系统默认时区时间，参数为一个时区的编号，可以通过时区编号类获取出来</p>
+<p>还可以通过Zoneld.systemDefault()来获取本地的默认时区ID</p>
+<p>​         <strong>getEpochSecond()：</strong>  获取从1970-01-01 00：00：00到当前时间的秒值 </p>
+<p>​         <strong>getNano()</strong>:   把获取到的当前时间的描述换算成纳秒</p>
+<p>​         <strong>ofEpochSecond()</strong>  在计算机元年（1970-01-01 00:00:00）的基础上增加秒数</p>
+<h4 id="三、与Date类转换"><a href="#三、与Date类转换" class="headerlink" title="三、与Date类转换"></a>三、与Date类转换</h4><p>​        垃圾百度查了半天只有一个好用</p>
+<p>​        <code>DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH&quot;).withZone(ZoneId.systemDefault());</code></p>
+<p><code>entity.setRealTime(dateFormat.format(entity.getTime()));</code></p>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>John Doe</h4>
+    <p>A designer, developer and entrepreneur. Spends his time travelling the world with a bag of kites. Likes journalism and publishing platforms.</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2019/10/15/各种时间类常用方法及转换/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/15/各种时间类常用方法及转换/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2019/10/15/各种时间类常用方法及转换/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2019/08/27/微信授权用户接口开发/">
+        微信授权用户接口开发 →
+    </a>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">ALei</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>
